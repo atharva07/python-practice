@@ -1,0 +1,88 @@
+# find command for log files
+1. find -type f -name "*.log" -size
+2. find . -type f empty
+3. find /path -type f -name "*.log" -size +100M
+4. find / -name "filename.txt"
+
+# Current directory - pwd
+# change directory - cd 
+# list files - ls
+
+# find files with specific permission
+# find / -type -f -perm 777
+
+# locate file quickly - locate file.log
+
+# r - Read, w - Write, x - Execute
+# r = 4, w = 2, x = 1
+# Owner - rwx - 4 + 2 + 1 = 7
+# Group - r - 4 
+# Others - r - 4
+
+# set permission - chmod 644 filename
+
+# Give read/write to owner, read to other 
+# chmod 644 file.txt
+
+# Lets say we have to provide a permission to SDET who is owner of Read, Write and Execute
+# chmod 700 filename
+
+# Lets say SDET is a part of chmod :sdet filename
+# chmod 770 filename
+
+# chmod 755 (Group Cannot write) and 775 (Group can write)
+# 7 - Owner, 5 - Group, 5 - Others
+
+# Searching words and patterns in file
+# Search whole word - $ grep -w ERROR logfile.txt
+
+# Basic - grep "ERROR" file.log
+# Case insensitive search - grep -i "error" file.log
+# Count occurrences - grep -c "ERROR" file.log
+
+# Print Specific column - awk '{print $2}' data.txt
+
+# Sort data
+# sort data.txt
+# Reverse sort - sort -r file.txt
+# Numeric sort - sort -n file.txt
+
+# App is slow how will you check - htop
+# CPU usage htop command
+# Memory usage
+# Zombie Process - a child process that has finished executing but still has an extry in process logs
+
+# Kill command
+# Kill the process - kill -p <pid>
+
+# Check running processes - ps aux
+# ps aux | grep nginx 
+
+# force Kill Process 
+# sudo kill -9 <PID>
+
+# Find top memory consuming processes 
+# ps aux --sort=%mem | head -10
+
+# total usage = df -h
+# folder wise usage = du -sh
+
+# get Process ID
+# ps -aux | grep main.py
+# ps aux | grep "process_name"
+
+# get the process by PID
+# ps -p <PID>
+
+# kill -9 <PID>
+
+for i in 1 2 3
+do 
+    echo "Number $i"
+done
+
+if [ "$1" == "start" ]; then
+    echo "starting service"
+else
+    echo "Invalid Input"
+fi

@@ -1,0 +1,45 @@
+[
+  {
+    "timestamp": "2026-04-11T10:15:30Z",
+    "level": "INFO",
+    "service": "auth-service",
+    "message": "User login successful",
+    "user_id": "U123",
+    "ip_address": "192.168.1.10",
+    "response_time_ms": 120
+  },
+  {
+    "timestamp": "2026-04-11T10:16:02Z",
+    "level": "ERROR",
+    "service": "payment-service",
+    "message": "Payment failed",
+    "user_id": "U456",
+    "error_code": "PAY_001",
+    "response_time_ms": 350
+  },
+  {
+    "timestamp": "2026-04-11T10:16:45Z",
+    "level": "WARN",
+    "service": "inventory-service",
+    "message": "Low stock warning",
+    "product_id": "P789",
+    "remaining_stock": 3
+  },
+  {
+    "timestamp": "2026-04-11T10:17:10Z",
+    "level": "INFO",
+    "service": "order-service",
+    "message": "Order created",
+    "order_id": "O101",
+    "user_id": "U123",
+    "amount": 250.75
+  },
+  {
+    "timestamp": "2026-04-11T10:18:22Z",
+    "level": "ERROR",
+    "service": "auth-service",
+    "message": "Invalid password attempt",
+    "user_id": "U999",
+    "ip_address": "192.168.1.25"
+  }
+]
